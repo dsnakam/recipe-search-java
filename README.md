@@ -5,7 +5,10 @@ A console-based recipe search application built in Java.
 This application allows users to store and search recipes from a text file using different filters such as recipe name, cooking time, and ingredients.
 
 Built as part of the Java Programming course by the University of Helsinki.
+---
+## 🎥 Demo
 
+![Demo](demo.gif)
 ---
 
 ## 📌 Features
