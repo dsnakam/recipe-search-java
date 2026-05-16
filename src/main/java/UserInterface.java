@@ -9,7 +9,10 @@ public class UserInterface {
 
     private void printMenu() {
         System.out.println();
-        System.out.println("-- Commands:");
+        System.out.println("=========================");
+        System.out.println("        COMMANDS         ");
+        System.out.println("=========================");
+        System.out.println();
         System.out.println("list - Lists the recipes");
         System.out.println("find name - Searches recipes by name");
         System.out.println("find cooking time - Searches recipe by cooking time");
@@ -33,7 +36,9 @@ public class UserInterface {
             switch (command) {
                 case "list" :
                     System.out.println();
-                    System.out.println("----------------");
+                    System.out.println("=========================");
+                    System.out.println("         RECIPES         ");
+                    System.out.println("=========================");
                     recipes.list();
                     System.out.println("----------------");
                     break;
@@ -43,8 +48,10 @@ public class UserInterface {
                     System.out.println();
                     System.out.print("Searched word: ");
                     String word = scanner.nextLine();
-                    System.out.println("----------------");
-                    System.out.println("   Recipes with the word \"" + word + "\": ");
+                    System.out.println();
+                    System.out.println("=========================");
+                    System.out.println("   RECIPES WITH \"" + word + "\": ");
+                    System.out.println("=========================");
                     for (Recipe recipe:recipes.searchRecipe(word)) {
                         System.out.println(recipe);
                     }
@@ -54,8 +61,10 @@ public class UserInterface {
                     System.out.println();
                     System.out.print("Max cooking time: ");
                     int cookingTime = Integer.parseInt(scanner.nextLine());
-                    System.out.println("----------------");
-                    System.out.println("   Recipes with max cooking time of " + cookingTime + ":");
+                    System.out.println();
+                    System.out.println("============================================");
+                    System.out.println("   RECIPES WITH MAX COOKING TIME OF " + cookingTime + ":");
+                    System.out.println("============================================");
                     for (Recipe recipe:recipes.searchCookingTime(cookingTime)) {
                         System.out.println(recipe);
                     }
@@ -65,8 +74,10 @@ public class UserInterface {
                     System.out.println();
                     System.out.print("Ingredient: ");
                     String ingredient = scanner.nextLine();
-                    System.out.println("----------------");
-                    System.out.println("   Recipes with the ingredient " + ingredient + ":");
+                    System.out.println();
+                    System.out.println("=========================");
+                    System.out.println("   RECIPES WITH " + ingredient + ":");
+                    System.out.println("=========================");
                     for (Recipe recipe:recipes.searchIngredient(ingredient)) {
                         System.out.println(recipe);
                     }
