@@ -41,7 +41,7 @@ public class RecipeBook {
     } 
 
     public void list() {
-        System.out.println("Recipes:");
+        System.out.println("-- Recipes:");
         for (Recipe recipe : recipes) {
             System.out.println(recipe);
         }
